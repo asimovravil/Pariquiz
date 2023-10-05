@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F19796C62ACEAAE6007F4BBD /* OpenSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F19796C02ACEAAE6007F4BBD /* OpenSans-Medium.ttf */; };
+		F19796C72ACEAAE6007F4BBD /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F19796C12ACEAAE6007F4BBD /* OpenSans-SemiBold.ttf */; };
+		F19796C82ACEAAE6007F4BBD /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F19796C22ACEAAE6007F4BBD /* OpenSans-Light.ttf */; };
+		F19796C92ACEAAE6007F4BBD /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F19796C32ACEAAE6007F4BBD /* OpenSans-Bold.ttf */; };
+		F19796CA2ACEAAE6007F4BBD /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F19796C42ACEAAE6007F4BBD /* OpenSans-ExtraBold.ttf */; };
+		F19796CB2ACEAAE6007F4BBD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F19796C52ACEAAE6007F4BBD /* OpenSans-Regular.ttf */; };
+		F19796CF2ACEAB9E007F4BBD /* AppImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19796CE2ACEAB9E007F4BBD /* AppImage.swift */; };
+		F19796D12ACEABC4007F4BBD /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19796D02ACEABC4007F4BBD /* AppColor.swift */; };
+		F19796D32ACEABD9007F4BBD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19796D22ACEABD9007F4BBD /* Colors.xcassets */; };
 		F1C0593B2ACE890D00794BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593A2ACE890D00794BF0 /* AppDelegate.swift */; };
 		F1C0593D2ACE890D00794BF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593C2ACE890D00794BF0 /* SceneDelegate.swift */; };
 		F1C0593F2ACE890D00794BF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593E2ACE890D00794BF0 /* ViewController.swift */; };
@@ -15,6 +24,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F19796C02ACEAAE6007F4BBD /* OpenSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Medium.ttf"; sourceTree = "<group>"; };
+		F19796C12ACEAAE6007F4BBD /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		F19796C22ACEAAE6007F4BBD /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		F19796C32ACEAAE6007F4BBD /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		F19796C42ACEAAE6007F4BBD /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F19796C52ACEAAE6007F4BBD /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		F19796CE2ACEAB9E007F4BBD /* AppImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImage.swift; sourceTree = "<group>"; };
+		F19796D02ACEABC4007F4BBD /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		F19796D22ACEABD9007F4BBD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F1C059372ACE890D00794BF0 /* Pariquiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pariquiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C0593A2ACE890D00794BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1C0593C2ACE890D00794BF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +73,9 @@
 		F19796BB2ACEA9BB007F4BBD /* Resources  */ = {
 			isa = PBXGroup;
 			children = (
-				F1C059432ACE890F00794BF0 /* Assets.xcassets */,
+				F19796BF2ACEAAC4007F4BBD /* Fonts */,
+				F19796CC2ACEAB57007F4BBD /* AssetHelp */,
+				F19796CD2ACEAB5D007F4BBD /* AppHelp */,
 			);
 			path = "Resources ";
 			sourceTree = "<group>";
@@ -74,6 +94,37 @@
 				F1C059482ACE890F00794BF0 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F19796BF2ACEAAC4007F4BBD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F19796C32ACEAAE6007F4BBD /* OpenSans-Bold.ttf */,
+				F19796C42ACEAAE6007F4BBD /* OpenSans-ExtraBold.ttf */,
+				F19796C22ACEAAE6007F4BBD /* OpenSans-Light.ttf */,
+				F19796C02ACEAAE6007F4BBD /* OpenSans-Medium.ttf */,
+				F19796C52ACEAAE6007F4BBD /* OpenSans-Regular.ttf */,
+				F19796C12ACEAAE6007F4BBD /* OpenSans-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F19796CC2ACEAB57007F4BBD /* AssetHelp */ = {
+			isa = PBXGroup;
+			children = (
+				F1C059432ACE890F00794BF0 /* Assets.xcassets */,
+				F19796D22ACEABD9007F4BBD /* Colors.xcassets */,
+			);
+			path = AssetHelp;
+			sourceTree = "<group>";
+		};
+		F19796CD2ACEAB5D007F4BBD /* AppHelp */ = {
+			isa = PBXGroup;
+			children = (
+				F19796CE2ACEAB9E007F4BBD /* AppImage.swift */,
+				F19796D02ACEABC4007F4BBD /* AppColor.swift */,
+			);
+			path = AppHelp;
 			sourceTree = "<group>";
 		};
 		F1C0592E2ACE890D00794BF0 = {
@@ -162,7 +213,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F19796D32ACEABD9007F4BBD /* Colors.xcassets in Resources */,
+				F19796C72ACEAAE6007F4BBD /* OpenSans-SemiBold.ttf in Resources */,
+				F19796C62ACEAAE6007F4BBD /* OpenSans-Medium.ttf in Resources */,
+				F19796CA2ACEAAE6007F4BBD /* OpenSans-ExtraBold.ttf in Resources */,
+				F19796C92ACEAAE6007F4BBD /* OpenSans-Bold.ttf in Resources */,
 				F1C059472ACE890F00794BF0 /* LaunchScreen.storyboard in Resources */,
+				F19796C82ACEAAE6007F4BBD /* OpenSans-Light.ttf in Resources */,
+				F19796CB2ACEAAE6007F4BBD /* OpenSans-Regular.ttf in Resources */,
 				F1C059442ACE890F00794BF0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +233,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1C0593F2ACE890D00794BF0 /* ViewController.swift in Sources */,
+				F19796D12ACEABC4007F4BBD /* AppColor.swift in Sources */,
+				F19796CF2ACEAB9E007F4BBD /* AppImage.swift in Sources */,
 				F1C0593B2ACE890D00794BF0 /* AppDelegate.swift in Sources */,
 				F1C0593D2ACE890D00794BF0 /* SceneDelegate.swift in Sources */,
 			);
