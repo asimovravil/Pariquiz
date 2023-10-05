@@ -34,6 +34,7 @@ enum AppImage: String, AppImageProtocol {
     
     // MARK: - Main
     
+    case pariquizLogo
     case splashLoading
 }
 
