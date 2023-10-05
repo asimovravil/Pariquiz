@@ -55,6 +55,7 @@
 		F19797212ACEB024007F4BBD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F19797202ACEB024007F4BBD /* FirebaseStorage */; };
 		F19797232ACEB024007F4BBD /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F19797222ACEB024007F4BBD /* FirebaseStorageCombine-Community */; };
 		F19797252ACEB092007F4BBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F19797242ACEB092007F4BBD /* GoogleService-Info.plist */; };
+		F19797282ACEB251007F4BBD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19797272ACEB251007F4BBD /* TabBarController.swift */; };
 		F1C0593B2ACE890D00794BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593A2ACE890D00794BF0 /* AppDelegate.swift */; };
 		F1C0593D2ACE890D00794BF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593C2ACE890D00794BF0 /* SceneDelegate.swift */; };
 		F1C0593F2ACE890D00794BF0 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593E2ACE890D00794BF0 /* SplashViewController.swift */; };
@@ -77,6 +78,7 @@
 		F19796DE2ACEAF7D007F4BBD /* ExternalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalService.swift; sourceTree = "<group>"; };
 		F19796EC2ACEAFD8007F4BBD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F19797242ACEB092007F4BBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F19797272ACEB251007F4BBD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F1C059372ACE890D00794BF0 /* Pariquiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pariquiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C0593A2ACE890D00794BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1C0593C2ACE890D00794BF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				F19796D92ACEAC82007F4BBD /* SplashScreen */,
+				F19797262ACEB233007F4BBD /* TabBarModule */,
 				F19796EB2ACEAFC8007F4BBD /* MainModule */,
 			);
 			path = Controllers;
@@ -224,6 +227,14 @@
 				F19796EC2ACEAFD8007F4BBD /* MainViewController.swift */,
 			);
 			path = MainModule;
+			sourceTree = "<group>";
+		};
+		F19797262ACEB233007F4BBD /* TabBarModule */ = {
+			isa = PBXGroup;
+			children = (
+				F19797272ACEB251007F4BBD /* TabBarController.swift */,
+			);
+			path = TabBarModule;
 			sourceTree = "<group>";
 		};
 		F1C0592E2ACE890D00794BF0 = {
@@ -375,6 +386,7 @@
 				F1C0593F2ACE890D00794BF0 /* SplashViewController.swift in Sources */,
 				F19796D12ACEABC4007F4BBD /* AppColor.swift in Sources */,
 				F19796CF2ACEAB9E007F4BBD /* AppImage.swift in Sources */,
+				F19797282ACEB251007F4BBD /* TabBarController.swift in Sources */,
 				F19796DD2ACEAF6A007F4BBD /* AppStorage.swift in Sources */,
 				F19796DF2ACEAF7D007F4BBD /* ExternalService.swift in Sources */,
 				F1C0593B2ACE890D00794BF0 /* AppDelegate.swift in Sources */,

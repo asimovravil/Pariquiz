@@ -37,5 +37,15 @@ enum AppImage: String, AppImageProtocol {
     case pariquizLogo
     case splashLoading
     case startQuizButton
+    
+    // MARK: - TabBar
+    
+    case homeTabActive
+    case rewardsTabActive
+    case settingsTabActive
+    
+    case homeTabInactive
+    case rewardsTabInactive
+    case settingsTabInactive
 }
 
