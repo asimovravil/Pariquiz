@@ -36,5 +36,6 @@ enum AppImage: String, AppImageProtocol {
     
     case pariquizLogo
     case splashLoading
+    case startQuizButton
 }
 

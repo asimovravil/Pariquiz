@@ -143,8 +143,8 @@
 		F19796BA2ACEA9B3007F4BBD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F19796EB2ACEAFC8007F4BBD /* MainModule */,
 				F19796D92ACEAC82007F4BBD /* SplashScreen */,
+				F19796EB2ACEAFC8007F4BBD /* MainModule */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
