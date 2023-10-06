@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             } else {
                 if !AppStorage.isOnboardingShowed {
                     self?.navigation = UINavigationController(
-                        rootViewController: WinViewController()
+                        rootViewController: LoseViewController()
                     )
                 }
                 self?.window?.rootViewController = self?.navigation

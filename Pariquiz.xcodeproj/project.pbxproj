@@ -66,6 +66,8 @@
 		F19797442AD009FE007F4BBD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19797432AD009FE007F4BBD /* SettingsViewController.swift */; };
 		F19797472AD019E1007F4BBD /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19797462AD019E1007F4BBD /* WinViewController.swift */; };
 		F19797492AD01E46007F4BBD /* WinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19797482AD01E46007F4BBD /* WinTableViewCell.swift */; };
+		F197974C2AD064ED007F4BBD /* LoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F197974B2AD064ED007F4BBD /* LoseViewController.swift */; };
+		F197974E2AD064F8007F4BBD /* LoseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F197974D2AD064F8007F4BBD /* LoseTableViewCell.swift */; };
 		F1C0593B2ACE890D00794BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593A2ACE890D00794BF0 /* AppDelegate.swift */; };
 		F1C0593D2ACE890D00794BF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593C2ACE890D00794BF0 /* SceneDelegate.swift */; };
 		F1C0593F2ACE890D00794BF0 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593E2ACE890D00794BF0 /* SplashViewController.swift */; };
@@ -97,6 +99,8 @@
 		F19797432AD009FE007F4BBD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F19797462AD019E1007F4BBD /* WinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
 		F19797482AD01E46007F4BBD /* WinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinTableViewCell.swift; sourceTree = "<group>"; };
+		F197974B2AD064ED007F4BBD /* LoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoseViewController.swift; sourceTree = "<group>"; };
+		F197974D2AD064F8007F4BBD /* LoseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoseTableViewCell.swift; sourceTree = "<group>"; };
 		F1C059372ACE890D00794BF0 /* Pariquiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pariquiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C0593A2ACE890D00794BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1C0593C2ACE890D00794BF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 				F197973D2AD005EC007F4BBD /* RewardsModule */,
 				F19797422AD009E5007F4BBD /* SettingsModule */,
 				F19797452AD01985007F4BBD /* WinModule */,
+				F197974A2AD064BF007F4BBD /* LoseModule */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -303,6 +308,15 @@
 				F19797482AD01E46007F4BBD /* WinTableViewCell.swift */,
 			);
 			path = WinModule;
+			sourceTree = "<group>";
+		};
+		F197974A2AD064BF007F4BBD /* LoseModule */ = {
+			isa = PBXGroup;
+			children = (
+				F197974B2AD064ED007F4BBD /* LoseViewController.swift */,
+				F197974D2AD064F8007F4BBD /* LoseTableViewCell.swift */,
+			);
+			path = LoseModule;
 			sourceTree = "<group>";
 		};
 		F1C0592E2ACE890D00794BF0 = {
@@ -461,6 +475,7 @@
 				F19797342ACF8F5D007F4BBD /* ModeViewController.swift in Sources */,
 				F19797282ACEB251007F4BBD /* TabBarController.swift in Sources */,
 				F19796DD2ACEAF6A007F4BBD /* AppStorage.swift in Sources */,
+				F197974C2AD064ED007F4BBD /* LoseViewController.swift in Sources */,
 				F19797442AD009FE007F4BBD /* SettingsViewController.swift in Sources */,
 				F19796DF2ACEAF7D007F4BBD /* ExternalService.swift in Sources */,
 				F19797492AD01E46007F4BBD /* WinTableViewCell.swift in Sources */,
@@ -468,6 +483,7 @@
 				F19796ED2ACEAFD8007F4BBD /* MainViewController.swift in Sources */,
 				F197972B2ACED8BB007F4BBD /* LevelsViewController.swift in Sources */,
 				F1C0593D2ACE890D00794BF0 /* SceneDelegate.swift in Sources */,
+				F197974E2AD064F8007F4BBD /* LoseTableViewCell.swift in Sources */,
 				F19797312ACEDB34007F4BBD /* LevelsTableViewCell.swift in Sources */,
 				F19796DB2ACEAF53007F4BBD /* LoadingViewController.swift in Sources */,
 				F19797412AD00628007F4BBD /* RewardsTableViewCell.swift in Sources */,
