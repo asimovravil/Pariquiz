@@ -61,6 +61,20 @@ final class LevelsTableViewCell: UITableViewCell {
         button.addTarget(self, action: #selector(buyButtonTapped), for: .touchUpInside)
         return button
     }()
+    
+    // MARK: - Properties
+
+    var imageName: UIImage? {
+        didSet {
+            quizImage.image = imageName
+        }
+    }
+
+    var localizedName: String? {
+        didSet {
+            quizLabel.text = localizedName
+        }
+    }
         
     // MARK: - Lifecycle
     
@@ -119,5 +133,12 @@ final class LevelsTableViewCell: UITableViewCell {
     
     @objc private func buyButtonTapped() {
         buyButtonTappedHandler?()
+    }
+    
+    // MARK: - Configure Cell
+
+    func configure(with imageName: String, localizedName: String) {
+        self.imageName = UIImage(named: imageName)
+        self.localizedName = localizedName
     }
 }

@@ -101,6 +101,21 @@ extension LevelsViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: LevelsTableViewCell.reuseID, for: indexPath) as? LevelsTableViewCell else {
             fatalError("Could not cast to LevelsTableViewCell")
         }
+        switch indexPath.row {
+        case 0:
+            cell.configure(with: AppImage.footballImage.rawValue , localizedName: "Football")
+        case 1:
+            cell.configure(with: AppImage.goalkeeperImage.rawValue , localizedName: "Goalkeeper")
+        case 2:
+            cell.configure(with: AppImage.footballImage.rawValue , localizedName: "Example 1")
+        case 3:
+            cell.configure(with: AppImage.goalkeeperImage.rawValue , localizedName: "Example 2")
+        case 4:
+            cell.configure(with: AppImage.footballImage.rawValue , localizedName: "Example 3")
+        default:
+            cell.imageName = nil
+            cell.localizedName = nil
+        }
         return cell
     }
     
