@@ -19,7 +19,7 @@ final class TabBarController: UITabBarController {
     
     private func setupTabBar() {
         let mainViewController = MainViewController()
-        let rewardsViewController = MainViewController()
+        let rewardsViewController = RewardsViewController()
         let settingViewController = MainViewController()
         
         self.tabBar.layer.cornerRadius = 30

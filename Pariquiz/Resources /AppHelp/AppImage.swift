@@ -38,6 +38,7 @@ enum AppImage: String, AppImageProtocol {
     case pariquizLogo
     case splashLoading
     case startQuizButton
+    case rewardsCell
     
     // MARK: - TabBar
     
