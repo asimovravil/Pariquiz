@@ -82,5 +82,6 @@ enum AppImage: String, AppImageProtocol {
     case awesome
     case tryAgain
     case victoryDop
+    case draw
 }
 
