@@ -60,6 +60,7 @@
 		F197972D2ACED945007F4BBD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F197972C2ACED945007F4BBD /* SnapKit */; };
 		F197972F2ACED945007F4BBD /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F197972E2ACED945007F4BBD /* SnapKit-Dynamic */; };
 		F19797312ACEDB34007F4BBD /* LevelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19797302ACEDB34007F4BBD /* LevelsTableViewCell.swift */; };
+		F19797342ACF8F5D007F4BBD /* ModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19797332ACF8F5D007F4BBD /* ModeViewController.swift */; };
 		F1C0593B2ACE890D00794BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593A2ACE890D00794BF0 /* AppDelegate.swift */; };
 		F1C0593D2ACE890D00794BF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593C2ACE890D00794BF0 /* SceneDelegate.swift */; };
 		F1C0593F2ACE890D00794BF0 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593E2ACE890D00794BF0 /* SplashViewController.swift */; };
@@ -85,6 +86,7 @@
 		F19797272ACEB251007F4BBD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F197972A2ACED8BB007F4BBD /* LevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
 		F19797302ACEDB34007F4BBD /* LevelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsTableViewCell.swift; sourceTree = "<group>"; };
+		F19797332ACF8F5D007F4BBD /* ModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeViewController.swift; sourceTree = "<group>"; };
 		F1C059372ACE890D00794BF0 /* Pariquiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pariquiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C0593A2ACE890D00794BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1C0593C2ACE890D00794BF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				F19797262ACEB233007F4BBD /* TabBarModule */,
 				F19796EB2ACEAFC8007F4BBD /* MainModule */,
 				F19797292ACED7EC007F4BBD /* LevelsModule */,
+				F19797322ACF8F43007F4BBD /* ModeModule */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -253,6 +256,14 @@
 				F19797302ACEDB34007F4BBD /* LevelsTableViewCell.swift */,
 			);
 			path = LevelsModule;
+			sourceTree = "<group>";
+		};
+		F19797322ACF8F43007F4BBD /* ModeModule */ = {
+			isa = PBXGroup;
+			children = (
+				F19797332ACF8F5D007F4BBD /* ModeViewController.swift */,
+			);
+			path = ModeModule;
 			sourceTree = "<group>";
 		};
 		F1C0592E2ACE890D00794BF0 = {
@@ -406,6 +417,7 @@
 				F1C0593F2ACE890D00794BF0 /* SplashViewController.swift in Sources */,
 				F19796D12ACEABC4007F4BBD /* AppColor.swift in Sources */,
 				F19796CF2ACEAB9E007F4BBD /* AppImage.swift in Sources */,
+				F19797342ACF8F5D007F4BBD /* ModeViewController.swift in Sources */,
 				F19797282ACEB251007F4BBD /* TabBarController.swift in Sources */,
 				F19796DD2ACEAF6A007F4BBD /* AppStorage.swift in Sources */,
 				F19796DF2ACEAF7D007F4BBD /* ExternalService.swift in Sources */,

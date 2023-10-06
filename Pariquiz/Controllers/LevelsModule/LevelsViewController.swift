@@ -116,6 +116,10 @@ extension LevelsViewController: UITableViewDataSource, UITableViewDelegate {
             cell.imageName = nil
             cell.localizedName = nil
         }
+        cell.playButtonTappedHandler = {
+            let controller = ModeViewController()
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
         return cell
     }
     

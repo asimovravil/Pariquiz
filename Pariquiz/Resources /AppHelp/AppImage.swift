@@ -57,5 +57,11 @@ enum AppImage: String, AppImageProtocol {
     case goalkeeperImage
     case priceQuiz
     case questionsTime
+    
+    // MARK: - Mode
+    
+    case withFriend
+    case forTime
+    case free
 }
 
