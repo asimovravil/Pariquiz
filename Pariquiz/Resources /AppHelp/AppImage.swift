@@ -64,5 +64,13 @@ enum AppImage: String, AppImageProtocol {
     case withFriend
     case forTime
     case free
+    
+    // MARK: - Settings
+    
+    case notification
+    case notificationOn
+    case rateUs
+    case shareApp
+    case privacyPolicy
 }
 

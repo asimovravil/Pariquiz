@@ -63,6 +63,7 @@
 		F19797342ACF8F5D007F4BBD /* ModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19797332ACF8F5D007F4BBD /* ModeViewController.swift */; };
 		F197973F2AD0061A007F4BBD /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F197973E2AD0061A007F4BBD /* RewardsViewController.swift */; };
 		F19797412AD00628007F4BBD /* RewardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19797402AD00628007F4BBD /* RewardsTableViewCell.swift */; };
+		F19797442AD009FE007F4BBD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19797432AD009FE007F4BBD /* SettingsViewController.swift */; };
 		F1C0593B2ACE890D00794BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593A2ACE890D00794BF0 /* AppDelegate.swift */; };
 		F1C0593D2ACE890D00794BF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593C2ACE890D00794BF0 /* SceneDelegate.swift */; };
 		F1C0593F2ACE890D00794BF0 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593E2ACE890D00794BF0 /* SplashViewController.swift */; };
@@ -91,6 +92,7 @@
 		F19797332ACF8F5D007F4BBD /* ModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeViewController.swift; sourceTree = "<group>"; };
 		F197973E2AD0061A007F4BBD /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		F19797402AD00628007F4BBD /* RewardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsTableViewCell.swift; sourceTree = "<group>"; };
+		F19797432AD009FE007F4BBD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F1C059372ACE890D00794BF0 /* Pariquiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pariquiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C0593A2ACE890D00794BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1C0593C2ACE890D00794BF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				F19797292ACED7EC007F4BBD /* LevelsModule */,
 				F19797322ACF8F43007F4BBD /* ModeModule */,
 				F197973D2AD005EC007F4BBD /* RewardsModule */,
+				F19797422AD009E5007F4BBD /* SettingsModule */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -278,6 +281,14 @@
 				F19797402AD00628007F4BBD /* RewardsTableViewCell.swift */,
 			);
 			path = RewardsModule;
+			sourceTree = "<group>";
+		};
+		F19797422AD009E5007F4BBD /* SettingsModule */ = {
+			isa = PBXGroup;
+			children = (
+				F19797432AD009FE007F4BBD /* SettingsViewController.swift */,
+			);
+			path = SettingsModule;
 			sourceTree = "<group>";
 		};
 		F1C0592E2ACE890D00794BF0 = {
@@ -435,6 +446,7 @@
 				F19797342ACF8F5D007F4BBD /* ModeViewController.swift in Sources */,
 				F19797282ACEB251007F4BBD /* TabBarController.swift in Sources */,
 				F19796DD2ACEAF6A007F4BBD /* AppStorage.swift in Sources */,
+				F19797442AD009FE007F4BBD /* SettingsViewController.swift in Sources */,
 				F19796DF2ACEAF7D007F4BBD /* ExternalService.swift in Sources */,
 				F1C0593B2ACE890D00794BF0 /* AppDelegate.swift in Sources */,
 				F19796ED2ACEAFD8007F4BBD /* MainViewController.swift in Sources */,
