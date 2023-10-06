@@ -32,8 +32,9 @@ extension AppImageProtocol {
 
 enum AppImage: String, AppImageProtocol {
     
-    // MARK: - Main
+    // MARK: - AppImage
     
+    case soloCoin
     case pariquizLogo
     case splashLoading
     case startQuizButton
@@ -47,5 +48,14 @@ enum AppImage: String, AppImageProtocol {
     case homeTabInactive
     case rewardsTabInactive
     case settingsTabInactive
+    
+    // MARK: - Levels
+    
+    case playButton
+    case buyButton
+    case footballImage
+    case goalkeeperImage
+    case priceQuiz
+    case questionsTime
 }
 

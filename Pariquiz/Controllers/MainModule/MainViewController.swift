@@ -58,6 +58,7 @@ final class MainViewController: UIViewController {
     // MARK: - Actions
     
     @objc private func startQuizButtonTapped() {
-
+        let controller = LevelsViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
