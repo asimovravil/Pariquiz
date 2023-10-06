@@ -72,5 +72,15 @@ enum AppImage: String, AppImageProtocol {
     case rateUs
     case shareApp
     case privacyPolicy
+    
+    // MARK: - Results
+    
+    case coinWin
+    case defeat
+    case victory
+    case home
+    case awesome
+    case tryAgain
+    case victoryDop
 }
 
