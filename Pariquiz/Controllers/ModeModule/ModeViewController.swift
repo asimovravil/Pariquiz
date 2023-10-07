@@ -15,21 +15,21 @@ final class ModeViewController: UIViewController {
     public lazy var withFriendButton: UIButton = {
         let button = UIButton()
         button.setImage(AppImage.withFriend.uiImage, for: .normal)
-//        button.addTarget(self, action: #selector(buyButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(withFriendButtonTapped), for: .touchUpInside)
         return button
     }()
     
     public lazy var forTimeButton: UIButton = {
         let button = UIButton()
         button.setImage(AppImage.forTime.uiImage, for: .normal)
-//        button.addTarget(self, action: #selector(buyButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(forTimeButtonTapped), for: .touchUpInside)
         return button
     }()
     
     public lazy var freeButton: UIButton = {
         let button = UIButton()
         button.setImage(AppImage.free.uiImage, for: .normal)
-//        button.addTarget(self, action: #selector(buyButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(freeButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -106,5 +106,24 @@ final class ModeViewController: UIViewController {
         
         let coinWalletBarButtonItem = UIBarButtonItem(customView: coinWalletStackView)
         navigationItem.rightBarButtonItem = coinWalletBarButtonItem
+    }
+    
+    // MARK: - Actions
+    
+    @objc func withFriendButtonTapped() {
+        let quizViewController = WithFriendViewController()
+        navigationController?.pushViewController(quizViewController, animated: true)
+    }
+    
+    @objc func forTimeButtonTapped() {
+        let quizViewController = QuizViewController()
+        quizViewController.isTimeMode = true
+        navigationController?.pushViewController(quizViewController, animated: true)
+        quizViewController.navigationItem.hidesBackButton = true
+    }
+    
+    @objc func freeButtonTapped() {
+        let quizViewController = QuizViewController()
+        navigationController?.pushViewController(quizViewController, animated: true)
     }
 }

@@ -270,10 +270,12 @@ final class QuizTableViewCell: UITableViewCell {
         if userCorrectAnswers == 10 {
             let winViewController = WinViewController()
             winViewController.userCorrectAnswers = userCorrectAnswers
+            winViewController.navigationItem.hidesBackButton = true
             self.navigationController?.pushViewController(winViewController, animated: true)
         } else {
             let loseViewController = LoseViewController()
             loseViewController.userCorrectAnswers = userCorrectAnswers
+            loseViewController.navigationItem.hidesBackButton = true
             self.navigationController?.pushViewController(loseViewController, animated: true)
         }
     }

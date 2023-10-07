@@ -10,7 +10,20 @@ import SnapKit
 
 final class QuizViewController: UIViewController {
     
+    var isTimeMode: Bool = false
+    var timer: Timer? 
+    var remainingTime = 300
+    
     // MARK: - UI
+    
+    public lazy var timerLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "OpenSans-Bold", size: 24)
+        label.text = "03:00"
+        label.textColor = AppColor.whiteCustom.uiColor
+        label.textAlignment = .right
+        return label
+    }()
     
     private lazy var coinWalletImage: UIImageView = {
         let imageView = UIImageView()
@@ -58,10 +71,47 @@ final class QuizViewController: UIViewController {
         setupNavigationBar()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if isTimeMode {
+            startTimer()
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        timer?.invalidate()
+    }
+
+    func startTimer() {
+        timer = Timer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        RunLoop.main.add(timer!, forMode: .common)
+        timer?.fire()
+    }
+
+    @objc func updateTimer() {
+        if remainingTime > 0 {
+            remainingTime -= 1
+            let minutes = remainingTime / 60
+            let seconds = remainingTime % 60
+            
+            DispatchQueue.main.async { [weak self] in
+                self?.timerLabel.text = String(format: "%02d:%02d", minutes, seconds)
+            }
+        } else {
+            timer?.invalidate()
+            DispatchQueue.main.async { [weak self] in
+                let loseViewController = LoseViewController()
+                self?.navigationController?.pushViewController(loseViewController, animated: true)
+            }
+        }
+    }
+    
     // MARK: - setupViews
     
     private func setupViews() {
-        [tableView, coinWalletStackView].forEach() {
+        [timerLabel, tableView, coinWalletStackView].forEach() {
             view.addSubview($0)
         }
         view.backgroundColor = AppColor.blackCustom.uiColor
@@ -80,16 +130,20 @@ final class QuizViewController: UIViewController {
     
     private func setupNavigationBar() {
         let titleLabel = UILabel()
-        titleLabel.text = "Mode"
+        titleLabel.text = "Game"
         titleLabel.font = UIFont(name: "OpenSans-Bold", size: 24)
         titleLabel.textColor = AppColor.yellowCustom.uiColor
         titleLabel.sizeToFit()
-        
+
         navigationItem.titleView = titleLabel
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
-        let coinWalletBarButtonItem = UIBarButtonItem(customView: coinWalletStackView)
-        navigationItem.rightBarButtonItem = coinWalletBarButtonItem
+
+        if isTimeMode {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(customView: timerLabel)
+        } else {
+            let coinWalletBarButtonItem = UIBarButtonItem(customView: coinWalletStackView)
+            navigationItem.rightBarButtonItem = coinWalletBarButtonItem
+        }
     }
 }
 
