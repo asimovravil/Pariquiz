@@ -247,6 +247,7 @@ final class QuizTableViewCell: UITableViewCell {
 
             if userGotItRight {
                 sender.backgroundColor = AppColor.yellowCustom.uiColor
+                userCorrectAnswers += 1
                 
                 if let quizVC = navigationController?.viewControllers.first(where: { $0 is QuizViewController }) as? QuizViewController {
                     if quizVC.currentQuestionNumber % 2 == 0 {
@@ -298,6 +299,7 @@ final class QuizTableViewCell: UITableViewCell {
                 let loseViewController = LoseViewController()
                 loseViewController.userCorrectAnswers = userCorrectAnswers
                 loseViewController.navigationItem.hidesBackButton = true
+                print("User Correct Answers: \(userCorrectAnswers)")
                 self.navigationController?.pushViewController(loseViewController, animated: true)
             }
         }
