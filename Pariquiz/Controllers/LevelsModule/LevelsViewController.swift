@@ -127,6 +127,7 @@ extension LevelsViewController: UITableViewDataSource, UITableViewDelegate {
             cell.playButton.setImage(AppImage.buyButton.uiImage, for: .normal)
             cell.buyButton.isEnabled = true
             cell.playButton.isEnabled = false
+            cell.buyButton.isHidden = false
             cell.priceQuizImage.isHidden = false
             cell.buyButtonTappedHandler = {
                 let alertController = UIAlertController(title: "Not Enough Coins", message: "You don't have enough coins to unlock this level.", preferredStyle: .alert)
@@ -139,6 +140,7 @@ extension LevelsViewController: UITableViewDataSource, UITableViewDelegate {
             cell.playButton.setImage(AppImage.buyButton.uiImage, for: .normal)
             cell.buyButton.isEnabled = true
             cell.playButton.isEnabled = false
+            cell.buyButton.isHidden = false
             cell.priceQuizImage.isHidden = false
             cell.buyButtonTappedHandler = {
                 let alertController = UIAlertController(title: "Not Enough Coins", message: "You don't have enough coins to unlock this level.", preferredStyle: .alert)
@@ -151,6 +153,7 @@ extension LevelsViewController: UITableViewDataSource, UITableViewDelegate {
             cell.playButton.setImage(AppImage.buyButton.uiImage, for: .normal)
             cell.buyButton.isEnabled = true
             cell.playButton.isEnabled = false
+            cell.buyButton.isHidden = false
             cell.priceQuizImage.isHidden = false
             cell.buyButtonTappedHandler = {
                 let alertController = UIAlertController(title: "Not Enough Coins", message: "You don't have enough coins to unlock this level.", preferredStyle: .alert)
@@ -163,6 +166,7 @@ extension LevelsViewController: UITableViewDataSource, UITableViewDelegate {
             cell.playButton.setImage(AppImage.buyButton.uiImage, for: .normal)
             cell.buyButton.isEnabled = true
             cell.playButton.isEnabled = false
+            cell.buyButton.isHidden = false
             cell.priceQuizImage.isHidden = false
             cell.buyButtonTappedHandler = {
                 let alertController = UIAlertController(title: "Not Enough Coins", message: "You don't have enough coins to unlock this level.", preferredStyle: .alert)
@@ -175,6 +179,7 @@ extension LevelsViewController: UITableViewDataSource, UITableViewDelegate {
             cell.playButton.setImage(AppImage.buyButton.uiImage, for: .normal)
             cell.buyButton.isEnabled = true
             cell.playButton.isEnabled = false
+            cell.buyButton.isHidden = false
             cell.priceQuizImage.isHidden = false
             cell.buyButtonTappedHandler = {
                 let alertController = UIAlertController(title: "Not Enough Coins", message: "You don't have enough coins to unlock this level.", preferredStyle: .alert)
@@ -187,6 +192,7 @@ extension LevelsViewController: UITableViewDataSource, UITableViewDelegate {
             cell.playButton.setImage(AppImage.buyButton.uiImage, for: .normal)
             cell.buyButton.isEnabled = true
             cell.playButton.isEnabled = false
+            cell.buyButton.isHidden = false
             cell.priceQuizImage.isHidden = false
             cell.buyButtonTappedHandler = {
                 let alertController = UIAlertController(title: "Not Enough Coins", message: "You don't have enough coins to unlock this level.", preferredStyle: .alert)
@@ -199,6 +205,7 @@ extension LevelsViewController: UITableViewDataSource, UITableViewDelegate {
             cell.playButton.setImage(AppImage.buyButton.uiImage, for: .normal)
             cell.buyButton.isEnabled = true
             cell.playButton.isEnabled = false
+            cell.buyButton.isHidden = false
             cell.priceQuizImage.isHidden = false
             cell.buyButtonTappedHandler = {
                 let alertController = UIAlertController(title: "Not Enough Coins", message: "You don't have enough coins to unlock this level.", preferredStyle: .alert)
