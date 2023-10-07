@@ -12,7 +12,10 @@ final class FriendsResultTableViewCell: UITableViewCell {
 
     static let reuseID = String(describing: FriendsResultTableViewCell.self)
     weak var navigationController: UINavigationController?
-    var userCorrectAnswers: Int = 0
+    var firstPlayerName: String?
+    var secondPlayerName: String?
+    var firstPlayerCorrectAnswers: Int = 0
+    var secondPlayerCorrectAnswers: Int = 0
     var homeButtonTappedHandler: (() -> Void)?
     
     // MARK: - UI
@@ -152,11 +155,12 @@ final class FriendsResultTableViewCell: UITableViewCell {
     
     private func calculateScore() {
         let totalQuestions = 10
-        firstAmountLabel.text = "\(userCorrectAnswers)"
-        
-        _ = (Double(userCorrectAnswers) / Double(totalQuestions)) * 100.0
-        
-        firstAmountLabel.text = "\(userCorrectAnswers)/\(totalQuestions)"
+
+        firstAmountLabel.text = "\(firstPlayerCorrectAnswers)/\(totalQuestions)"
+        secondAmountLabel.text = "\(secondPlayerCorrectAnswers)/\(totalQuestions)"
+
+        firstScoreLabel.text = "\(firstPlayerName ?? "Player 1"): "
+        secondScoreLabel.text = "\(secondPlayerName ?? "Player 2"): "
     }
     
     func configure() {

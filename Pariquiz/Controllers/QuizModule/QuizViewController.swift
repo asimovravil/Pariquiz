@@ -178,6 +178,7 @@ extension QuizViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: QuizTableViewCell.reuseID, for: indexPath) as? QuizTableViewCell else {
             fatalError("Could not cast to QuizTableViewCell")
         }
+        cell.isFriendMode = isFriendMode
         cell.questionDelegate = self
         cell.navigationController = self.navigationController
         cell.selectionStyle = .none

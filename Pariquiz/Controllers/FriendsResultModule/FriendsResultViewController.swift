@@ -10,7 +10,10 @@ import SnapKit
 
 final class FriendsResultViewController: UIViewController {
 
-    var userCorrectAnswers: Int = 0
+    var firstPlayerName: String?
+    var secondPlayerName: String?
+    var firstPlayerCorrectAnswers: Int = 0
+    var secondPlayerCorrectAnswers: Int = 0
     
     // MARK: - UI
     
@@ -65,7 +68,10 @@ extension FriendsResultViewController: UITableViewDataSource, UITableViewDelegat
             fatalError("Could not cast to FriendsResultTableViewCell")
         }
         cell.navigationController = self.navigationController
-        cell.userCorrectAnswers = userCorrectAnswers
+        cell.firstPlayerCorrectAnswers = firstPlayerCorrectAnswers
+        cell.secondPlayerCorrectAnswers = secondPlayerCorrectAnswers
+        cell.firstPlayerName = firstPlayerName
+        cell.secondPlayerName = secondPlayerName
         cell.configure()
         cell.selectionStyle = .none
         cell.backgroundColor = .clear

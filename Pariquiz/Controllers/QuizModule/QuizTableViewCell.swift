@@ -14,8 +14,13 @@ final class QuizTableViewCell: UITableViewCell {
     var quizBrain = QuizBrain()
     private var answerSelected = false
     var userCorrectAnswers = 0
+    var firstPlayerName: String?
+    var secondPlayerName: String?
+    var firstPlayerCorrectAnswers: Int = 0
+    var secondPlayerCorrectAnswers: Int = 0
     weak var navigationController: UINavigationController?
     weak var questionDelegate: QuestionDelegate?
+    var isFriendMode: Bool = false
 
     // MARK: - UI
     
@@ -269,16 +274,26 @@ final class QuizTableViewCell: UITableViewCell {
     }
     
     private func showResultViewController() {
-        if userCorrectAnswers == 10 {
-            let winViewController = WinViewController()
-            winViewController.userCorrectAnswers = userCorrectAnswers
-            winViewController.navigationItem.hidesBackButton = true
-            self.navigationController?.pushViewController(winViewController, animated: true)
+        if let quizVC = navigationController?.viewControllers.first(where: { $0 is QuizViewController }) as? QuizViewController,
+            quizVC.isFriendMode {
+            let friendsResultVC = FriendsResultViewController()
+            friendsResultVC.firstPlayerName = firstPlayerName
+            friendsResultVC.secondPlayerName = secondPlayerName
+            friendsResultVC.firstPlayerCorrectAnswers = userCorrectAnswers
+            friendsResultVC.secondPlayerCorrectAnswers = secondPlayerCorrectAnswers
+            navigationController?.pushViewController(friendsResultVC, animated: true)
         } else {
-            let loseViewController = LoseViewController()
-            loseViewController.userCorrectAnswers = userCorrectAnswers
-            loseViewController.navigationItem.hidesBackButton = true
-            self.navigationController?.pushViewController(loseViewController, animated: true)
+            if userCorrectAnswers == 10 {
+                let winViewController = WinViewController()
+                winViewController.userCorrectAnswers = userCorrectAnswers
+                winViewController.navigationItem.hidesBackButton = true
+                self.navigationController?.pushViewController(winViewController, animated: true)
+            } else {
+                let loseViewController = LoseViewController()
+                loseViewController.userCorrectAnswers = userCorrectAnswers
+                loseViewController.navigationItem.hidesBackButton = true
+                self.navigationController?.pushViewController(loseViewController, animated: true)
+            }
         }
     }
 }
