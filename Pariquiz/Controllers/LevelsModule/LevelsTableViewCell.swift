@@ -23,9 +23,8 @@ final class LevelsTableViewCell: UITableViewCell {
         return uiView
     }()
     
-    private lazy var quizImage: UIImageView = {
+    public lazy var quizImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = AppImage.footballImage.uiImage
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 12
@@ -101,7 +100,7 @@ final class LevelsTableViewCell: UITableViewCell {
     // MARK: - setupViews
     
     private func setupViews() {
-        [cardQuiz, quizImage, quizLabel, questionsTimeImage, priceQuizImage, playButton].forEach {
+        [cardQuiz, quizImage, quizLabel, questionsTimeImage, priceQuizImage, playButton, buyButton].forEach {
             contentView.addSubview($0)
         }
     }
@@ -134,6 +133,10 @@ final class LevelsTableViewCell: UITableViewCell {
             make.leading.equalTo(cardQuiz.snp.leading).offset(16)
         }
         playButton.snp.makeConstraints { make in
+            make.top.equalTo(quizImage.snp.bottom).offset(20)
+            make.trailing.equalTo(cardQuiz.snp.trailing).offset(-16)
+        }
+        buyButton.snp.makeConstraints { make in
             make.top.equalTo(quizImage.snp.bottom).offset(20)
             make.trailing.equalTo(cardQuiz.snp.trailing).offset(-16)
         }

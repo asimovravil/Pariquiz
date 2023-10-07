@@ -60,6 +60,12 @@ enum AppImage: String, AppImageProtocol {
     case goalkeeperImage
     case priceQuiz
     case questionsTime
+    case team
+    case referee
+    case ball
+    case dribbling
+    case offside
+    case penalty 
     
     // MARK: - Mode
     

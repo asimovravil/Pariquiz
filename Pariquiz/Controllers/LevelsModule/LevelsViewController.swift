@@ -103,7 +103,7 @@ final class LevelsViewController: UIViewController {
 
 extension LevelsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -112,22 +112,103 @@ extension LevelsViewController: UITableViewDataSource, UITableViewDelegate {
         }
         switch indexPath.row {
         case 0:
-            cell.configure(with: AppImage.footballImage.rawValue , localizedName: "Football")
+            cell.configure(with: AppImage.footballImage.rawValue, localizedName: "Football")
             cell.playButton.setImage(AppImage.playButton.uiImage, for: .normal)
             cell.playButton.isEnabled = true
+            cell.buyButton.isEnabled = false
+            cell.buyButton.isHidden = true
             cell.priceQuizImage.isHidden = true
-        case 1, 2:
-            cell.configure(with: indexPath.row == 1 ? AppImage.goalkeeperImage.rawValue : AppImage.question.rawValue , localizedName: indexPath.row == 1 ? "Goalkeeper" : "Guardian")
+            cell.playButtonTappedHandler = {
+                let controller = ModeViewController()
+                self.navigationController?.pushViewController(controller, animated: true)
+            }
+        case 1:
+            cell.configure(with: AppImage.goalkeeperImage.rawValue, localizedName: "Goalkeeper")
             cell.playButton.setImage(AppImage.buyButton.uiImage, for: .normal)
+            cell.buyButton.isEnabled = true
             cell.playButton.isEnabled = false
             cell.priceQuizImage.isHidden = false
+            cell.buyButtonTappedHandler = {
+                let alertController = UIAlertController(title: "Not Enough Coins", message: "You don't have enough coins to unlock this level.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        case 2:
+            cell.configure(with: AppImage.referee.rawValue, localizedName: "Referee")
+            cell.playButton.setImage(AppImage.buyButton.uiImage, for: .normal)
+            cell.buyButton.isEnabled = true
+            cell.playButton.isEnabled = false
+            cell.priceQuizImage.isHidden = false
+            cell.buyButtonTappedHandler = {
+                let alertController = UIAlertController(title: "Not Enough Coins", message: "You don't have enough coins to unlock this level.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        case 3:
+            cell.configure(with: AppImage.ball.rawValue, localizedName: "Ball")
+            cell.playButton.setImage(AppImage.buyButton.uiImage, for: .normal)
+            cell.buyButton.isEnabled = true
+            cell.playButton.isEnabled = false
+            cell.priceQuizImage.isHidden = false
+            cell.buyButtonTappedHandler = {
+                let alertController = UIAlertController(title: "Not Enough Coins", message: "You don't have enough coins to unlock this level.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        case 4:
+            cell.configure(with: AppImage.team.rawValue, localizedName: "Team")
+            cell.playButton.setImage(AppImage.buyButton.uiImage, for: .normal)
+            cell.buyButton.isEnabled = true
+            cell.playButton.isEnabled = false
+            cell.priceQuizImage.isHidden = false
+            cell.buyButtonTappedHandler = {
+                let alertController = UIAlertController(title: "Not Enough Coins", message: "You don't have enough coins to unlock this level.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        case 5:
+            cell.configure(with: AppImage.penalty.rawValue, localizedName: "Penalty")
+            cell.playButton.setImage(AppImage.buyButton.uiImage, for: .normal)
+            cell.buyButton.isEnabled = true
+            cell.playButton.isEnabled = false
+            cell.priceQuizImage.isHidden = false
+            cell.buyButtonTappedHandler = {
+                let alertController = UIAlertController(title: "Not Enough Coins", message: "You don't have enough coins to unlock this level.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        case 6:
+            cell.configure(with: AppImage.offside.rawValue, localizedName: "Offside")
+            cell.playButton.setImage(AppImage.buyButton.uiImage, for: .normal)
+            cell.buyButton.isEnabled = true
+            cell.playButton.isEnabled = false
+            cell.priceQuizImage.isHidden = false
+            cell.buyButtonTappedHandler = {
+                let alertController = UIAlertController(title: "Not Enough Coins", message: "You don't have enough coins to unlock this level.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        case 7:
+            cell.configure(with: AppImage.dribbling.rawValue, localizedName: "Dribbling")
+            cell.playButton.setImage(AppImage.buyButton.uiImage, for: .normal)
+            cell.buyButton.isEnabled = true
+            cell.playButton.isEnabled = false
+            cell.priceQuizImage.isHidden = false
+            cell.buyButtonTappedHandler = {
+                let alertController = UIAlertController(title: "Not Enough Coins", message: "You don't have enough coins to unlock this level.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
         default:
             cell.imageName = nil
             cell.localizedName = nil
-        }
-        cell.playButtonTappedHandler = {
-            let controller = ModeViewController()
-            self.navigationController?.pushViewController(controller, animated: true)
         }
         return cell
     }
