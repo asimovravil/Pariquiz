@@ -277,8 +277,8 @@ final class QuizTableViewCell: UITableViewCell {
         if let quizVC = navigationController?.viewControllers.first(where: { $0 is QuizViewController }) as? QuizViewController,
             quizVC.isFriendMode {
             let friendsResultVC = FriendsResultViewController()
-            friendsResultVC.firstPlayerName = firstPlayerName
-            friendsResultVC.secondPlayerName = secondPlayerName
+            friendsResultVC.firstPlayerName = quizVC.firstPlayerName
+            friendsResultVC.secondPlayerName = quizVC.secondPlayerName
             friendsResultVC.firstPlayerCorrectAnswers = userCorrectAnswers
             friendsResultVC.secondPlayerCorrectAnswers = secondPlayerCorrectAnswers
             navigationController?.pushViewController(friendsResultVC, animated: true)

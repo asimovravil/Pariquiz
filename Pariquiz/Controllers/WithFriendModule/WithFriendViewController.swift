@@ -168,7 +168,7 @@ final class WithFriendViewController: UIViewController {
 
     @objc private func startQuizButtonTapped() {
         let controller = QuizViewController()
-        controller.isFriendMode = true 
+        controller.isFriendMode = true
         controller.firstPlayerName = firstTextField.text ?? "Player 1"
         controller.secondPlayerName = secondTextField.text ?? "Player 2"
         self.navigationController?.pushViewController(controller, animated: true)

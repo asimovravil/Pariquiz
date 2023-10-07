@@ -45,7 +45,7 @@ final class FriendsResultTableViewCell: UITableViewCell {
     
     private lazy var resultLabel: UILabel = {
         let label = UILabel()
-        label.text = "Draw"
+        label.text = "Friends"
         label.textColor = AppColor.whiteCustom.uiColor
         label.font = UIFont(name: "OpenSans-Bold", size: 64)
         label.numberOfLines = 0
