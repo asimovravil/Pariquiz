@@ -25,6 +25,11 @@ struct QuizBrain {
         Question(q: "What is the term for an attempt to score by kicking the ball into the opponent's goal?", a: ["Dribble", "Tackle", "Shot", "Pass"], correctAnswer: "Shot")
     ]
 
+    mutating func prevQuestion() {
+        if questionNumber > 0 {
+            questionNumber -= 1
+        }
+    }
 
     func getQuestionText() -> String {
         return quiz[questionNumber].text

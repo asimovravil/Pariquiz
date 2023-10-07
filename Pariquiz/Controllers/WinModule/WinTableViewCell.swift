@@ -125,10 +125,6 @@ final class WinTableViewCell: UITableViewCell {
     
     private func calculateScore() {
         let totalQuestions = 10
-        amountLabel.text = "\(userCorrectAnswers)"
-        
-        _ = (Double(userCorrectAnswers) / Double(totalQuestions)) * 100.0
-        
         amountLabel.text = "\(userCorrectAnswers)/\(totalQuestions)"
     }
     

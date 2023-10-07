@@ -193,9 +193,10 @@ final class QuizTableViewCell: UITableViewCell {
     // MARK: - Actions
     
     @objc private func quitQuizButtonTapped() {
-        let controller = TabBarController()
-        controller.navigationItem.hidesBackButton = true
-        self.navigationController?.pushViewController(controller, animated: true)
+        if quizBrain.questionNumber > 0 {
+            quizBrain.prevQuestion()
+            updateUI()
+        }
     }
     
     @objc private func nextQuizButtonTapped() {
@@ -206,6 +207,7 @@ final class QuizTableViewCell: UITableViewCell {
         } else {
             updateUI()
         }
+        updateButtonStates()
     }
     
     @objc public func updateUI() {
@@ -224,33 +226,56 @@ final class QuizTableViewCell: UITableViewCell {
         secondAnswerButton.backgroundColor = AppColor.colorTabCustom.uiColor
         thirdAnswerButton.backgroundColor = AppColor.colorTabCustom.uiColor
         fourthAnswerButton.backgroundColor = AppColor.colorTabCustom.uiColor
-        
+        updateButtonStates()
         answerSelected = false
+        nextQuizButton.isEnabled = false
     }
     
     @objc private func answerButtonTapped(_ sender: UIButton) {
         if !answerSelected {
+            nextQuizButton.isEnabled = true
+
             let userAnswer = sender.currentTitle!
 
             let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
 
             if userGotItRight {
                 sender.backgroundColor = AppColor.yellowCustom.uiColor
-                userCorrectAnswers += 10
+                userCorrectAnswers += 1
             } else {
                 sender.backgroundColor = AppColor.yellowCustom.uiColor
             }
 
             sender.layer.cornerRadius = 24
-
+            updateButtonStates()
             answerSelected = true
         }
     }
     
+    private func updateButtonStates() {
+        if quizBrain.questionNumber == 0 {
+            quitQuizButton.setImage(AppImage.previousInactive.uiImage, for: .normal)
+        } else {
+            quitQuizButton.setImage(AppImage.previous.uiImage, for: .normal)
+        }
+        
+        if quizBrain.questionNumber == quizBrain.quiz.count - 1 {
+            nextQuizButton.setImage(AppImage.submitQuiz.uiImage, for: .normal)
+        } else {
+            nextQuizButton.setImage(AppImage.next.uiImage, for: .normal)
+        }
+    }
+    
     private func showResultViewController() {
-//        let resultViewController = ResultViewController()
-//        resultViewController.userCorrectAnswers = userCorrectAnswers
-//        self.navigationController?.pushViewController(resultViewController, animated: true)
+        if userCorrectAnswers == 10 {
+            let winViewController = WinViewController()
+            winViewController.userCorrectAnswers = userCorrectAnswers
+            self.navigationController?.pushViewController(winViewController, animated: true)
+        } else {
+            let loseViewController = LoseViewController()
+            loseViewController.userCorrectAnswers = userCorrectAnswers
+            self.navigationController?.pushViewController(loseViewController, animated: true)
+        }
     }
 }
 
