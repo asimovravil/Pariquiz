@@ -15,6 +15,7 @@ final class QuizTableViewCell: UITableViewCell {
     private var answerSelected = false
     var userCorrectAnswers = 0
     weak var navigationController: UINavigationController?
+    weak var questionDelegate: QuestionDelegate?
 
     // MARK: - UI
     
@@ -195,13 +196,14 @@ final class QuizTableViewCell: UITableViewCell {
     @objc private func quitQuizButtonTapped() {
         if quizBrain.questionNumber > 0 {
             quizBrain.prevQuestion()
+            questionDelegate?.didUpdateQuestionNumber(to: quizBrain.questionNumber)
             updateUI()
         }
     }
     
     @objc private func nextQuizButtonTapped() {
         quizBrain.nextQuestion()
-        
+        questionDelegate?.didUpdateQuestionNumber(to: quizBrain.questionNumber)
         if quizBrain.questionNumber == 0 {
             showResultViewController()
         } else {

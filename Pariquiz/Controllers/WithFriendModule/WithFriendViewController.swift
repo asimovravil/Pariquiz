@@ -8,6 +8,10 @@
 import UIKit
 import SnapKit
 
+protocol QuestionDelegate: AnyObject {
+    func didUpdateQuestionNumber(to questionNumber: Int)
+}
+
 final class WithFriendViewController: UIViewController {
 
     // MARK: - UI
@@ -86,7 +90,7 @@ final class WithFriendViewController: UIViewController {
     public lazy var startQuizButton: UIButton = {
         let button = UIButton()
         button.setImage(AppImage.startQuizButton.uiImage, for: .normal)
-//        button.addTarget(self, action: #selector(buyButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(startQuizButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -162,4 +166,25 @@ final class WithFriendViewController: UIViewController {
         startQuizButton.isEnabled = isBothTextFieldsFilled
     }
 
+    @objc private func startQuizButtonTapped() {
+        let controller = QuizViewController()
+        controller.isFriendMode = true 
+        controller.firstPlayerName = firstTextField.text ?? "Player 1"
+        controller.secondPlayerName = secondTextField.text ?? "Player 2"
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
+extension WithFriendViewController: QuestionDelegate {
+    func didUpdateQuestionNumber(to questionNumber: Int) {
+        let currentPlayerName = (questionNumber + 1) % 2 == 0 ? secondTextField.text ?? "Player 2" : firstTextField.text ?? "Player 1"
+        
+        let titleLabel = UILabel()
+        titleLabel.text = currentPlayerName
+        titleLabel.font = UIFont(name: "OpenSans-Bold", size: 24)
+        titleLabel.textColor = AppColor.yellowCustom.uiColor
+        titleLabel.sizeToFit()
+        
+        navigationItem.titleView = titleLabel
+    }
 }

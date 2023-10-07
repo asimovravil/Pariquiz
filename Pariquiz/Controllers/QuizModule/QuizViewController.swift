@@ -13,6 +13,10 @@ final class QuizViewController: UIViewController {
     var isTimeMode: Bool = false
     var timer: Timer? 
     var remainingTime = 300
+    var firstPlayerName: String = ""
+    var secondPlayerName: String = ""
+    var currentQuestionNumber: Int = 0
+    var isFriendMode: Bool = false
     
     // MARK: - UI
     
@@ -130,10 +134,16 @@ final class QuizViewController: UIViewController {
     
     private func setupNavigationBar() {
         let titleLabel = UILabel()
-        titleLabel.text = "Game"
         titleLabel.font = UIFont(name: "OpenSans-Bold", size: 24)
         titleLabel.textColor = AppColor.yellowCustom.uiColor
         titleLabel.sizeToFit()
+
+        if isFriendMode {
+            let currentPlayerName = currentQuestionNumber % 2 == 0 ? firstPlayerName : secondPlayerName
+            titleLabel.text = currentPlayerName
+        } else {
+            titleLabel.text = "Game"
+        }
 
         navigationItem.titleView = titleLabel
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
@@ -144,6 +154,18 @@ final class QuizViewController: UIViewController {
             let coinWalletBarButtonItem = UIBarButtonItem(customView: coinWalletStackView)
             navigationItem.rightBarButtonItem = coinWalletBarButtonItem
         }
+    }
+    
+    func moveToNextQuestion() {
+        currentQuestionNumber += 1
+        setupNavigationBar()
+    }
+}
+
+extension QuizViewController: QuestionDelegate {
+    func didUpdateQuestionNumber(to questionNumber: Int) {
+        currentQuestionNumber = questionNumber
+        setupNavigationBar()
     }
 }
 
@@ -156,6 +178,7 @@ extension QuizViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: QuizTableViewCell.reuseID, for: indexPath) as? QuizTableViewCell else {
             fatalError("Could not cast to QuizTableViewCell")
         }
+        cell.questionDelegate = self
         cell.navigationController = self.navigationController
         cell.selectionStyle = .none
         cell.backgroundColor = .clear
@@ -166,3 +189,4 @@ extension QuizViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
+
