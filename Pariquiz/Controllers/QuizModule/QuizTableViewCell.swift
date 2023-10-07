@@ -163,24 +163,28 @@ final class QuizTableViewCell: UITableViewCell {
         firstAnswerButton.snp.makeConstraints { make in
             make.top.equalTo(questionImage.snp.bottom).offset(16)
             make.leading.equalToSuperview().offset(24)
+            make.trailing.equalToSuperview().offset(-24)
             make.height.equalTo(60)
             make.width.equalTo(342)
         }
         secondAnswerButton.snp.makeConstraints { make in
             make.top.equalTo(firstAnswerButton.snp.bottom).offset(12)
             make.leading.equalToSuperview().offset(24)
+            make.trailing.equalToSuperview().offset(-24)
             make.height.equalTo(60)
             make.width.equalTo(342)
         }
         thirdAnswerButton.snp.makeConstraints { make in
             make.top.equalTo(secondAnswerButton.snp.bottom).offset(12)
             make.leading.equalToSuperview().offset(24)
+            make.trailing.equalToSuperview().offset(-24)
             make.height.equalTo(60)
             make.width.equalTo(342)
         }
         fourthAnswerButton.snp.makeConstraints { make in
             make.top.equalTo(thirdAnswerButton.snp.bottom).offset(12)
             make.leading.equalToSuperview().offset(24)
+            make.trailing.equalToSuperview().offset(-24)
             make.height.equalTo(60)
             make.width.equalTo(342)
         }

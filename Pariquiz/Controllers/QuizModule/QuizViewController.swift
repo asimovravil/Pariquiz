@@ -36,11 +36,13 @@ final class QuizViewController: UIViewController {
         imageView.image = AppImage.soloCoin.uiImage
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
+        imageView.widthAnchor.constraint(equalToConstant: 24).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 24).isActive = true
         return imageView
     }()
     
     public lazy var coinWalletStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [coinWalletLabel, coinWalletImage])
+        let stackView = UIStackView(arrangedSubviews: [coinWalletImage, coinWalletLabel])
         stackView.axis = .horizontal
         stackView.spacing = 8
         return stackView

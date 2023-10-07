@@ -30,11 +30,13 @@ final class LevelsViewController: UIViewController {
         imageView.image = AppImage.soloCoin.uiImage
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
+        imageView.widthAnchor.constraint(equalToConstant: 24).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 24).isActive = true
         return imageView
     }()
     
     public lazy var coinWalletStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [coinWalletLabel, coinWalletImage])
+        let stackView = UIStackView(arrangedSubviews: [coinWalletImage, coinWalletLabel])
         stackView.axis = .horizontal
         stackView.spacing = 8
         return stackView
@@ -111,10 +113,14 @@ extension LevelsViewController: UITableViewDataSource, UITableViewDelegate {
         switch indexPath.row {
         case 0:
             cell.configure(with: AppImage.footballImage.rawValue , localizedName: "Football")
-        case 1:
-            cell.configure(with: AppImage.goalkeeperImage.rawValue , localizedName: "Goalkeeper")
-        case 2:
-            cell.configure(with: AppImage.question.rawValue , localizedName: "Guardian")
+            cell.playButton.setImage(AppImage.playButton.uiImage, for: .normal)
+            cell.playButton.isEnabled = true
+            cell.priceQuizImage.isHidden = true
+        case 1, 2:
+            cell.configure(with: indexPath.row == 1 ? AppImage.goalkeeperImage.rawValue : AppImage.question.rawValue , localizedName: indexPath.row == 1 ? "Goalkeeper" : "Guardian")
+            cell.playButton.setImage(AppImage.buyButton.uiImage, for: .normal)
+            cell.playButton.isEnabled = false
+            cell.priceQuizImage.isHidden = false
         default:
             cell.imageName = nil
             cell.localizedName = nil
