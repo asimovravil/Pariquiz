@@ -11,8 +11,40 @@ import SnapKit
 final class WinViewController: UIViewController {
 
     var userCorrectAnswers: Int = 0
+    var score: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: "score")
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "score")
+            coinWalletLabel.text = "\(newValue)"
+        }
+    }
     
     // MARK: - UI
+    
+    private lazy var coinWalletImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = AppImage.soloCoin.uiImage
+        imageView.layer.masksToBounds = true
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+    
+    public lazy var coinWalletStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [coinWalletLabel, coinWalletImage])
+        stackView.axis = .horizontal
+        stackView.spacing = 8
+        return stackView
+    }()
+    
+    private lazy var coinWalletLabel: UILabel = {
+        let label = UILabel()
+        label.text = "0"
+        label.font = UIFont(name: "OpenSans-Bold", size: 24)
+        label.textColor = AppColor.whiteCustom.uiColor
+        return label
+    }()
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
@@ -71,6 +103,7 @@ extension WinViewController: UITableViewDataSource, UITableViewDelegate {
         cell.backgroundColor = .clear
         cell.awesomeButtonTappedHandler = {
             let controller = TabBarController()
+            self.score += 20
             controller.navigationItem.hidesBackButton = true
             self.navigationController?.pushViewController(controller, animated: true)
         }
