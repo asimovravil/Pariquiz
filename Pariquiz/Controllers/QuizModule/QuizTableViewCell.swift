@@ -243,12 +243,18 @@ final class QuizTableViewCell: UITableViewCell {
             nextQuizButton.isEnabled = true
 
             let userAnswer = sender.currentTitle!
-
             let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
 
             if userGotItRight {
                 sender.backgroundColor = AppColor.yellowCustom.uiColor
-                userCorrectAnswers += 1
+                
+                if let quizVC = navigationController?.viewControllers.first(where: { $0 is QuizViewController }) as? QuizViewController {
+                    if quizVC.currentQuestionNumber % 2 == 0 {
+                        quizVC.firstPlayerCorrectAnswers += 1
+                    } else {
+                        quizVC.secondPlayerCorrectAnswers += 1
+                    }
+                }
             } else {
                 sender.backgroundColor = AppColor.yellowCustom.uiColor
             }
@@ -279,8 +285,8 @@ final class QuizTableViewCell: UITableViewCell {
             let friendsResultVC = FriendsResultViewController()
             friendsResultVC.firstPlayerName = quizVC.firstPlayerName
             friendsResultVC.secondPlayerName = quizVC.secondPlayerName
-            friendsResultVC.firstPlayerCorrectAnswers = userCorrectAnswers
-            friendsResultVC.secondPlayerCorrectAnswers = secondPlayerCorrectAnswers
+            friendsResultVC.firstPlayerCorrectAnswers = quizVC.firstPlayerCorrectAnswers
+            friendsResultVC.secondPlayerCorrectAnswers = quizVC.secondPlayerCorrectAnswers
             navigationController?.pushViewController(friendsResultVC, animated: true)
         } else {
             if userCorrectAnswers == 10 {

@@ -17,6 +17,8 @@ final class QuizViewController: UIViewController {
     var secondPlayerName: String = ""
     var currentQuestionNumber: Int = 0
     var isFriendMode: Bool = false
+    var firstPlayerCorrectAnswers: Int = 0
+    var secondPlayerCorrectAnswers: Int = 0
     
     // MARK: - UI
     
