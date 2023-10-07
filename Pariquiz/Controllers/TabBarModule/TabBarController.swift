@@ -26,6 +26,7 @@ final class TabBarController: UITabBarController {
         self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         self.tabBar.isTranslucent = true
         
+        tabBar.tintColor = AppColor.yellowCustom.uiColor
         tabBar.backgroundColor = AppColor.colorTabCustom.uiColor
                 
         mainViewController.tabBarItem = UITabBarItem(
