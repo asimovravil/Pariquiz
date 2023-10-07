@@ -95,6 +95,7 @@ final class QuizViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         timer?.invalidate()
+        isFriendMode = false
     }
 
     func startTimer() {
