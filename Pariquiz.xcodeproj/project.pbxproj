@@ -70,6 +70,7 @@
 		F197974E2AD064F8007F4BBD /* LoseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F197974D2AD064F8007F4BBD /* LoseTableViewCell.swift */; };
 		F19797512AD06663007F4BBD /* FriendsResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19797502AD06663007F4BBD /* FriendsResultViewController.swift */; };
 		F19797532AD06673007F4BBD /* FriendsResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19797522AD06673007F4BBD /* FriendsResultTableViewCell.swift */; };
+		F19797562AD11F71007F4BBD /* WithFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19797552AD11F71007F4BBD /* WithFriendViewController.swift */; };
 		F1C0593B2ACE890D00794BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593A2ACE890D00794BF0 /* AppDelegate.swift */; };
 		F1C0593D2ACE890D00794BF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593C2ACE890D00794BF0 /* SceneDelegate.swift */; };
 		F1C0593F2ACE890D00794BF0 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593E2ACE890D00794BF0 /* SplashViewController.swift */; };
@@ -105,6 +106,7 @@
 		F197974D2AD064F8007F4BBD /* LoseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoseTableViewCell.swift; sourceTree = "<group>"; };
 		F19797502AD06663007F4BBD /* FriendsResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsResultViewController.swift; sourceTree = "<group>"; };
 		F19797522AD06673007F4BBD /* FriendsResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsResultTableViewCell.swift; sourceTree = "<group>"; };
+		F19797552AD11F71007F4BBD /* WithFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithFriendViewController.swift; sourceTree = "<group>"; };
 		F1C059372ACE890D00794BF0 /* Pariquiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pariquiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C0593A2ACE890D00794BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1C0593C2ACE890D00794BF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				F19796EB2ACEAFC8007F4BBD /* MainModule */,
 				F19797292ACED7EC007F4BBD /* LevelsModule */,
 				F19797322ACF8F43007F4BBD /* ModeModule */,
+				F19797542AD11F49007F4BBD /* WithFriendModule */,
 				F197973D2AD005EC007F4BBD /* RewardsModule */,
 				F19797422AD009E5007F4BBD /* SettingsModule */,
 				F19797452AD01985007F4BBD /* WinModule */,
@@ -331,6 +334,14 @@
 				F19797522AD06673007F4BBD /* FriendsResultTableViewCell.swift */,
 			);
 			path = FriendsResultModule;
+			sourceTree = "<group>";
+		};
+		F19797542AD11F49007F4BBD /* WithFriendModule */ = {
+			isa = PBXGroup;
+			children = (
+				F19797552AD11F71007F4BBD /* WithFriendViewController.swift */,
+			);
+			path = WithFriendModule;
 			sourceTree = "<group>";
 		};
 		F1C0592E2ACE890D00794BF0 = {
@@ -497,6 +508,7 @@
 				F19796ED2ACEAFD8007F4BBD /* MainViewController.swift in Sources */,
 				F197972B2ACED8BB007F4BBD /* LevelsViewController.swift in Sources */,
 				F1C0593D2ACE890D00794BF0 /* SceneDelegate.swift in Sources */,
+				F19797562AD11F71007F4BBD /* WithFriendViewController.swift in Sources */,
 				F19797532AD06673007F4BBD /* FriendsResultTableViewCell.swift in Sources */,
 				F197974E2AD064F8007F4BBD /* LoseTableViewCell.swift in Sources */,
 				F19797312ACEDB34007F4BBD /* LevelsTableViewCell.swift in Sources */,
