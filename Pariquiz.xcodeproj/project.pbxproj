@@ -71,6 +71,10 @@
 		F19797512AD06663007F4BBD /* FriendsResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19797502AD06663007F4BBD /* FriendsResultViewController.swift */; };
 		F19797532AD06673007F4BBD /* FriendsResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19797522AD06673007F4BBD /* FriendsResultTableViewCell.swift */; };
 		F19797562AD11F71007F4BBD /* WithFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19797552AD11F71007F4BBD /* WithFriendViewController.swift */; };
+		F197975B2AD1255B007F4BBD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F197975A2AD1255B007F4BBD /* Question.swift */; };
+		F197975D2AD12567007F4BBD /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F197975C2AD12567007F4BBD /* QuizBrain.swift */; };
+		F197975F2AD12648007F4BBD /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F197975E2AD12648007F4BBD /* QuizViewController.swift */; };
+		F19797612AD12656007F4BBD /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19797602AD12656007F4BBD /* QuizTableViewCell.swift */; };
 		F1C0593B2ACE890D00794BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593A2ACE890D00794BF0 /* AppDelegate.swift */; };
 		F1C0593D2ACE890D00794BF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593C2ACE890D00794BF0 /* SceneDelegate.swift */; };
 		F1C0593F2ACE890D00794BF0 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0593E2ACE890D00794BF0 /* SplashViewController.swift */; };
@@ -107,6 +111,10 @@
 		F19797502AD06663007F4BBD /* FriendsResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsResultViewController.swift; sourceTree = "<group>"; };
 		F19797522AD06673007F4BBD /* FriendsResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsResultTableViewCell.swift; sourceTree = "<group>"; };
 		F19797552AD11F71007F4BBD /* WithFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithFriendViewController.swift; sourceTree = "<group>"; };
+		F197975A2AD1255B007F4BBD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		F197975C2AD12567007F4BBD /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
+		F197975E2AD12648007F4BBD /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		F19797602AD12656007F4BBD /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		F1C059372ACE890D00794BF0 /* Pariquiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pariquiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C0593A2ACE890D00794BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1C0593C2ACE890D00794BF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +189,7 @@
 				F19797292ACED7EC007F4BBD /* LevelsModule */,
 				F19797322ACF8F43007F4BBD /* ModeModule */,
 				F19797542AD11F49007F4BBD /* WithFriendModule */,
+				F19797572AD12535007F4BBD /* QuizModule */,
 				F197973D2AD005EC007F4BBD /* RewardsModule */,
 				F19797422AD009E5007F4BBD /* SettingsModule */,
 				F19797452AD01985007F4BBD /* WinModule */,
@@ -344,6 +353,25 @@
 			path = WithFriendModule;
 			sourceTree = "<group>";
 		};
+		F19797572AD12535007F4BBD /* QuizModule */ = {
+			isa = PBXGroup;
+			children = (
+				F19797592AD1254D007F4BBD /* Model */,
+				F197975E2AD12648007F4BBD /* QuizViewController.swift */,
+				F19797602AD12656007F4BBD /* QuizTableViewCell.swift */,
+			);
+			path = QuizModule;
+			sourceTree = "<group>";
+		};
+		F19797592AD1254D007F4BBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F197975A2AD1255B007F4BBD /* Question.swift */,
+				F197975C2AD12567007F4BBD /* QuizBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F1C0592E2ACE890D00794BF0 = {
 			isa = PBXGroup;
 			children = (
@@ -497,20 +525,24 @@
 				F197973F2AD0061A007F4BBD /* RewardsViewController.swift in Sources */,
 				F19796D12ACEABC4007F4BBD /* AppColor.swift in Sources */,
 				F19796CF2ACEAB9E007F4BBD /* AppImage.swift in Sources */,
+				F197975D2AD12567007F4BBD /* QuizBrain.swift in Sources */,
 				F19797342ACF8F5D007F4BBD /* ModeViewController.swift in Sources */,
 				F19797282ACEB251007F4BBD /* TabBarController.swift in Sources */,
 				F19796DD2ACEAF6A007F4BBD /* AppStorage.swift in Sources */,
 				F197974C2AD064ED007F4BBD /* LoseViewController.swift in Sources */,
+				F197975B2AD1255B007F4BBD /* Question.swift in Sources */,
 				F19797442AD009FE007F4BBD /* SettingsViewController.swift in Sources */,
 				F19796DF2ACEAF7D007F4BBD /* ExternalService.swift in Sources */,
 				F19797492AD01E46007F4BBD /* WinTableViewCell.swift in Sources */,
 				F1C0593B2ACE890D00794BF0 /* AppDelegate.swift in Sources */,
 				F19796ED2ACEAFD8007F4BBD /* MainViewController.swift in Sources */,
 				F197972B2ACED8BB007F4BBD /* LevelsViewController.swift in Sources */,
+				F19797612AD12656007F4BBD /* QuizTableViewCell.swift in Sources */,
 				F1C0593D2ACE890D00794BF0 /* SceneDelegate.swift in Sources */,
 				F19797562AD11F71007F4BBD /* WithFriendViewController.swift in Sources */,
 				F19797532AD06673007F4BBD /* FriendsResultTableViewCell.swift in Sources */,
 				F197974E2AD064F8007F4BBD /* LoseTableViewCell.swift in Sources */,
+				F197975F2AD12648007F4BBD /* QuizViewController.swift in Sources */,
 				F19797312ACEDB34007F4BBD /* LevelsTableViewCell.swift in Sources */,
 				F19796DB2ACEAF53007F4BBD /* LoadingViewController.swift in Sources */,
 				F19797512AD06663007F4BBD /* FriendsResultViewController.swift in Sources */,

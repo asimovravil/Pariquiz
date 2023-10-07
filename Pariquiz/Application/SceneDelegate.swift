@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             } else {
                 if !AppStorage.isOnboardingShowed {
                     self?.navigation = UINavigationController(
-                        rootViewController: WithFriendViewController()
+                        rootViewController: QuizViewController()
                     )
                 }
                 self?.window?.rootViewController = self?.navigation

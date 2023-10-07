@@ -40,6 +40,7 @@ enum AppImage: String, AppImageProtocol {
     case startQuizButton
     case startQuizInactiveButton
     case rewardsCell
+    case question
     
     // MARK: - TabBar
     
@@ -84,5 +85,17 @@ enum AppImage: String, AppImageProtocol {
     case tryAgain
     case victoryDop
     case draw
+    
+    // MARK: - Quiz
+    
+    case next
+    case nextInactive
+    case previous
+    case previousInactive
+    case submitQuiz
+    case firstAnswer
+    case secondAnswer
+    case thirdAnswer
+    case fourthAnswer
 }
 
