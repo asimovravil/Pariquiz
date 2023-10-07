@@ -69,6 +69,11 @@ extension LoseViewController: UITableViewDataSource, UITableViewDelegate {
         cell.configure()
         cell.selectionStyle = .none
         cell.backgroundColor = .clear
+        cell.tryAgainButtonTappedHandler = {
+            let controller = TabBarController()
+            controller.navigationItem.hidesBackButton = true
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
         return cell
     }
     

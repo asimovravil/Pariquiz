@@ -154,7 +154,7 @@ final class FriendsResultTableViewCell: UITableViewCell {
     }
     
     private func calculateScore() {
-        let totalQuestions = 10
+        let totalQuestions = 5
 
         firstAmountLabel.text = "\(firstPlayerCorrectAnswers)/\(totalQuestions)"
         secondAmountLabel.text = "\(secondPlayerCorrectAnswers)/\(totalQuestions)"

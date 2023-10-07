@@ -75,6 +75,11 @@ extension FriendsResultViewController: UITableViewDataSource, UITableViewDelegat
         cell.configure()
         cell.selectionStyle = .none
         cell.backgroundColor = .clear
+        cell.homeButtonTappedHandler = {
+            let controller = TabBarController()
+            controller.navigationItem.hidesBackButton = true
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
         return cell
     }
     
