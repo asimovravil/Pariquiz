@@ -101,7 +101,7 @@ final class LevelsViewController: UIViewController {
 
 extension LevelsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -114,11 +114,7 @@ extension LevelsViewController: UITableViewDataSource, UITableViewDelegate {
         case 1:
             cell.configure(with: AppImage.goalkeeperImage.rawValue , localizedName: "Goalkeeper")
         case 2:
-            cell.configure(with: AppImage.footballImage.rawValue , localizedName: "Example 1")
-        case 3:
-            cell.configure(with: AppImage.goalkeeperImage.rawValue , localizedName: "Example 2")
-        case 4:
-            cell.configure(with: AppImage.footballImage.rawValue , localizedName: "Example 3")
+            cell.configure(with: AppImage.question.rawValue , localizedName: "Guardian")
         default:
             cell.imageName = nil
             cell.localizedName = nil

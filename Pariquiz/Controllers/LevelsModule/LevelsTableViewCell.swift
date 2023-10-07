@@ -110,6 +110,7 @@ final class LevelsTableViewCell: UITableViewCell {
             make.top.equalTo(cardQuiz.snp.top).offset(16)
             make.leading.equalTo(cardQuiz.snp.leading).offset(16)
             make.trailing.equalTo(cardQuiz.snp.trailing).offset(-16)
+            make.height.equalTo(150)
         }
         quizLabel.snp.makeConstraints { make in
             make.top.equalTo(quizImage.snp.bottom).offset(10)
